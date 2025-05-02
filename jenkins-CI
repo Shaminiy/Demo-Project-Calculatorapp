@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('1. Checkout Code') {
             steps {
-                git branch: 'main', url: ''https://github.com/Rajkolupula/Demo-Project-Calculatorapp.git
+                git branch: 'master', url: ''https://github.com/Rajkolupula/Demo-Project-Calculatorapp.git
             }
         }
 
