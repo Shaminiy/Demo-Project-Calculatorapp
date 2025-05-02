@@ -1,14 +1,11 @@
-# Use an official OpenJDK runtime as the base image
-FROM openjdk:17-jdk-slim
+# Use official Nginx image
+FROM nginx:alpine
 
-# Set the working directory inside the container
-WORKDIR /app
+# Copy website files to the default nginx public folder
+COPY . /usr/share/nginx/html
 
-# Copy the JAR file into the container
-COPY target/*.jar app.jar
+# Expose port 80
+EXPOSE 80
 
-# Expose the port the app runs on
-EXPOSE 8080
-
-# Run the JAR file
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+# Start Nginx when container runs
+CMD ["nginx", "-g", "daemon off;"]
