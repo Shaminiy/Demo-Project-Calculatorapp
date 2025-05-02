@@ -29,7 +29,7 @@ pipeline {
                     def latestTag = "${DOCKER_USERNAME}/${IMAGE_NAME}:latest"
 
                     // Ensure correct credentials usage
-                    withCredentials([usernamePassword(credentialsId: '52570c4c-9197-4b38-b761-353c660703f9', usernameVariable: 'docker_user', passwordVariable: 'docker_pass')]) {
+                    withCredentials([usernamePassword(credentialsId: 'hub_creds', usernameVariable: 'docker_user', passwordVariable: 'docker_pass')]) {
                         // Docker login securely without interpolation
                         sh """
                             echo \${docker_pass} | docker login -u \${docker_user} --password-stdin
