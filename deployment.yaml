@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: calculator-container
-        image: rajukolupula/calculator-app:latest  # Replace with your Docker Hub image
+        image: rajukolupula/calculator-app-1:latest  # Replace with your Docker Hub image
         ports:
         - containerPort: 80
 
