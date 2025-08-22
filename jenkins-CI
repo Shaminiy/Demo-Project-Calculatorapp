@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_USERNAME = 'rajukolupula'  // Replace with your DockerHub username
+        DOCKER_USERNAME = 'shaminiy'  // Replace with your DockerHub username
         IMAGE_NAME = 'calculator-app'
     }
 
