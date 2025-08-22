@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: calculator-container
-        image: rajukolupula/calculator-app:latest  # Replace with your Docker Hub image
+        image: shaminiy/sample-calci-app:v1
         ports:
         - containerPort: 80
 
@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: calculator-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: calculator
   ports:
